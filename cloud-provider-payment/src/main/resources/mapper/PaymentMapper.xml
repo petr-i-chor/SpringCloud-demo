@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ourchem.springcloud.dao.PaymentDao">
+
+    <resultMap id="BaseResultMap" type="ourchem.springcloud.domain.Payment">
+        <id column="id" property="id"/>
+        <result column="serial" property="serial"/>
+    </resultMap>
+
+<!--
+    public int addPayment(Payment payment);
+
+    public int deletePayment(@Param("id") Long id);
+
+    public Payment selectPayment(@Param("id") Long id);
+
+    -->
+    <insert id="addPayment" parameterType="Payment">
+        insert into payment (serial) values (#{serial})
+    </insert>
+
+    <delete id="deletePayment" parameterType="Long">
+        delete from payment where id = #{id}
+    </delete>
+
+    <select id="selectPayment" parameterType="Long" resultMap="BaseResultMap">
+        select id,serial from payment where id = #{id}
+    </select>
+</mapper>

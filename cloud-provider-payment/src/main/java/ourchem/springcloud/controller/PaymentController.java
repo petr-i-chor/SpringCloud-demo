@@ -38,7 +38,7 @@ public class PaymentController {
     public Result<Payment> payment(@PathVariable(value = "id") Long id){
         Payment payment = paymentService.selectPayment(id);
         if (payment!=null){
-            return new Result<Payment>(200,"删除成功",payment);
+            return new Result<Payment>(payment,"删除成功",200);
         }else {
             return new Result<Payment>(500,"删除失败");
         }

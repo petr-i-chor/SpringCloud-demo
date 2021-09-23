@@ -2,15 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud-provider-payment" />
+        <module name="cloud-cumsumer-order80" />
+        <module name="cloud-api-commons" />
+        <module name="cloud-eureka-service7001" />
+        <module name="cloud-provider-payment8089" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="cloud-provider-payment" target="1.8" />
+      <module name="cloud-api-commons" target="1.8" />
+      <module name="cloud-cumsumer-order80" target="1.8" />
+      <module name="cloud-eureka-service7001" target="1.8" />
+      <module name="cloud-provider-payment8089" target="1.8" />
       <module name="ourchem-springcloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -10,7 +10,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>cloud-provider-payment</module>
+        <module>cloud-provider-payment8089</module>
+        <module>cloud-cumsumer-order80</module>
+        <module>cloud-api-commons</module>
+        <module>cloud-eureka-service7001</module>
     </modules>
 
     <!-- 统一管理jar包版本-->
@@ -22,7 +25,7 @@
         <junit.version>4.12</junit.version>
         <lombok.version>1.18.10</lombok.version>
         <log4j.version>1.2.17</log4j.version>
-        <mysql.version>5.1.9</mysql.version>
+        <mysql.version>8.0.18</mysql.version>
         <druid.version>1.1.16</druid.version>
         <mybatis.spring.boot.version>2.1.1</mybatis.spring.boot.version>
     </properties>
@@ -117,7 +120,17 @@
                     <locales>en,fr</locales>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
         </plugins>
+
+
     </build>
 
 

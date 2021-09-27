@@ -13,27 +13,28 @@ import javax.annotation.Resource;
 @RequestMapping("/cumsumer")
 public class OrderController {
 
-    private static final String PAYMENY_URL = "http://localhost:8089";
-
+//    private static final String PAYMENT_URL = "http://localhost:8001";
+    private final static String PAYMENT_URL = "http://CLOUD-PAYMENT-SERVICE";
+    
     @Resource
     private RestTemplate restTemplate;
 
     @GetMapping("/payment/add")
     public Result<Payment> add(Payment payment){
 
-        return restTemplate.postForObject(PAYMENY_URL+"/payment",payment,Result.class);
+        return restTemplate.postForObject(PAYMENT_URL+"/payment",payment,Result.class);
     }
 
     @GetMapping("/payment/delete/{id}")
     public Result<Payment> delete(@PathVariable Long id){
-        return restTemplate.getForObject(PAYMENY_URL+"/payment/"+id,Result.class);
+        return restTemplate.getForObject(PAYMENT_URL+"/payment/"+id,Result.class);
 
     }
 
     @GetMapping("/payment/getInfo/{id}")
     public Result<Payment> getInfo(@PathVariable Long id){
 
-        return restTemplate.getForObject(PAYMENY_URL+"/payment/"+id,Result.class);
+        return restTemplate.getForObject(PAYMENT_URL+"/payment/"+id,Result.class);
     }
 
 }

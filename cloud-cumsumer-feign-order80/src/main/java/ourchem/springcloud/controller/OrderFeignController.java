@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ourchem.springcloud.domain.Payment;
-import ourchem.springcloud.service.PaymentFeignService;
+import ourchem.springcloud.service.OrderFeignService;
 import ourchem.springcloud.utils.Result;
 
 import javax.annotation.Resource;
@@ -15,15 +15,23 @@ import javax.annotation.Resource;
 @RestController
 @Slf4j
 @RequestMapping("/comsumer")
-public class PaymentFeignController {
+public class OrderFeignController {
 
     @Resource
-    private PaymentFeignService paymentFeignService;
+    private OrderFeignService orderFeignService;
 
 
     @GetMapping("/payment/getInfo/{id}")
     public Result<Payment> getInfo(@PathVariable Long id){
 
-        return paymentFeignService.getInfo(id);
+        return orderFeignService.getInfo(id);
     }
+
+    @GetMapping("payment/feign/timeout")
+    public String timeout(){
+        return orderFeignService.timeout();
+    }
+
+
+
 }

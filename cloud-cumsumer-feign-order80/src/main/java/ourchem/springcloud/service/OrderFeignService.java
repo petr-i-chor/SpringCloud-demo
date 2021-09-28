@@ -9,8 +9,12 @@ import ourchem.springcloud.utils.Result;
 
 @Component
 @FeignClient("CLOUD-PAYMENT-SERVICE")
-public interface PaymentFeignService {
+public interface OrderFeignService {
 
     @GetMapping("/payment/{id}")
     Result<Payment> getInfo(@PathVariable(value = "id") Long id);
+
+    @GetMapping("/payment/feign/timeout")
+    String timeout();
+
 }

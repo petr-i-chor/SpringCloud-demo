@@ -1,0 +1,38 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-cumsumer-hystrix-order
+
+eureka:
+  client:
+    #false表示不向服务中心注册自己
+    register-with-eureka: true
+    #false表示自己就是服务中心，职责是维护服务，不需要去检索服务
+    fetch-registry: true
+    service-url:
+      #设置与eureka service交互的地址 查询服务和注册服务都需要依赖这个地址
+      defaultZone: http://localhost:7001/eureka/  #单机版
+#       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #集群版
+
+
+#ribbon:
+#  ReadTimeOut: 50000
+#  ConnectTimeOut: 50000
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 100000 #单位毫秒
+        readTimeout: 100000 #单位毫秒
+
+  hystrix:
+    enabled: true #如果处理自身的容错就开启。开启方式与生产端不一样。
+
+
+logging:
+  level:
+    ourchem.springcloud.service.PaymentFeignService: debug
+

@@ -23,7 +23,7 @@ public class PaymentController {
         return paymentService.paymentInfo_OK(id);
     }
 
-    //失败
+    //超时
     @GetMapping("/hystrix/timeout/{id}")
     public String paymentInfo_TimeOut(@PathVariable Integer id){
         return paymentService.paymentInfo_TimeOut(id) ;
@@ -36,5 +36,7 @@ public class PaymentController {
         log.info("*******result:"+result);
         return result;
     }
+
+
 
 }

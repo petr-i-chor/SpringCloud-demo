@@ -3,8 +3,6 @@ package springcloud.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
-import ourchem.springcloud.domain.Payment;
-import ourchem.springcloud.utils.Result;
 
 import javax.annotation.Resource;
 

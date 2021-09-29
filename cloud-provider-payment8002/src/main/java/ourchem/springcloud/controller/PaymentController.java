@@ -51,4 +51,11 @@ public class PaymentController {
             return new Result<Payment>(500,"操作失败");
         }
     }
+
+    @GetMapping("/lb")
+    public String getPaymentLB(){
+        return serverPort;
+    }
+
+
 }

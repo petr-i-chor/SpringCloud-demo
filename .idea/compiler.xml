@@ -7,31 +7,37 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cloudalibaba-provider-payment9001" />
         <module name="cloud-provider-hystrix-payment8001" />
+        <module name="cloud-cumsumer-feign-order80" />
         <module name="cloud-api-commons" />
-        <module name="cloud-cumsumer-feign-hystrix-order80" />
+        <module name="cloud-cumsumerzk-order80" />
         <module name="cloud-provider-payment8003" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-provider-payment8001" />
-        <module name="cloud-eureka-service7002" />
-        <module name="cloud-eureka-service7001" />
+        <module name="cloud-cumsumer-feign-hystrix-order80" />
         <module name="cloud-cumsumer-order80" />
-        <module name="cloud-cumsumer-feign-order80" />
-        <module name="cloud-cumsumerzk-order80" />
+        <module name="cloud-cumsumer-hystrix-dashboard9001" />
+        <module name="cloud-eureka-service7002" />
+        <module name="cloud-gateway-gateway9527" />
+        <module name="cloud-eureka-service7001" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud-api-commons" target="1.8" />
       <module name="cloud-cumsumer-feign-hystrix-order80" target="1.8" />
       <module name="cloud-cumsumer-feign-order80" target="1.8" />
+      <module name="cloud-cumsumer-hystrix-dashboard9001" target="1.8" />
       <module name="cloud-cumsumer-order80" target="1.8" />
       <module name="cloud-cumsumerzk-order80" target="1.8" />
       <module name="cloud-eureka-service7001" target="1.8" />
       <module name="cloud-eureka-service7002" target="1.8" />
+      <module name="cloud-gateway-gateway9527" target="1.8" />
       <module name="cloud-provider-hystrix-payment8001" target="1.8" />
       <module name="cloud-provider-payment8001" target="1.8" />
       <module name="cloud-provider-payment8002" target="1.8" />
       <module name="cloud-provider-payment8003" target="1.8" />
+      <module name="cloudalibaba-provider-payment9001" target="1.8" />
       <module name="ourchem-springcloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>

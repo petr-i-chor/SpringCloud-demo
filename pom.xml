@@ -21,6 +21,9 @@
         <module>cloud-cumsumer-feign-order80</module>
         <module>cloud-provider-hystrix-payment8001</module>
         <module>cloud-cumsumer-feign-hystrix-order80</module>
+        <module>cloud-cumsumer-hystrix-dashboard9001</module>
+        <module>cloud-gateway-gateway9527</module>
+        <module>cloudalibaba-provider-payment9001</module>
     </modules>
 
     <!-- 统一管理jar包版本-->
@@ -69,6 +72,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!--mysql-->
             <dependency>
                 <groupId>mysql</groupId>
